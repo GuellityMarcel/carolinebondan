@@ -88,22 +88,11 @@
 
 <!-- ===================== HEADER ===================== -->
 <header class="site-header" id="topo">
-  <div class="header-top">
-    <div class="container header-top-inner">
-      <a href="#inicio" class="brand" aria-label="Caroline Bondan — Início">
-        <img src="assets/img/icon-white.webp" alt="" width="44" height="45" class="brand-mark" loading="eager" fetchpriority="high">
-        <span class="brand-text">
-          <span class="brand-name">Caroline Bondan</span>
-          <span class="brand-sub">Consultoria e Assessoria Ambiental</span>
-        </span>
-      </a>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobileMenu">
-        <i class="fa-solid fa-bars" aria-hidden="true"></i>
-      </button>
-    </div>
-  </div>
-  <nav class="header-nav" aria-label="Navegação principal">
-    <div class="container header-nav-inner">
+  <div class="container header-inner">
+    <a href="#inicio" class="brand" aria-label="Caroline Bondan — Início">
+      <img src="assets/img/logo-full.webp" alt="Caroline Bondan — Consultoria e Assessoria Ambiental" width="560" height="333" class="logo-img" loading="eager" fetchpriority="high">
+    </a>
+    <nav class="header-nav" aria-label="Navegação principal">
       <ul class="nav-menu" id="navMenu">
         <li><a href="#inicio" class="nav-link active" data-nav>Início</a></li>
         <li><a href="#sobre" class="nav-link" data-nav>Sobre</a></li>
@@ -112,12 +101,17 @@
         <li><a href="#depoimentos" class="nav-link" data-nav>Depoimentos</a></li>
         <li><a href="#contato" class="nav-link" data-nav>Contato</a></li>
       </ul>
+    </nav>
+    <div class="header-actions">
       <a href="https://wa.me/5567996899084?text=Ol%C3%A1%2C%20Caroline!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn btn-whatsapp" target="_blank" rel="noopener">
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
         <span>Fale no WhatsApp</span>
       </a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobileMenu">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
     </div>
-  </nav>
+  </div>
 </header>
 
 <!-- Mobile slide-in menu -->
@@ -150,10 +144,9 @@
     <!-- [INSERIR IMAGEM]: imagem de fundo já aplicada (imagem/hero.png -> otimizada para assets/img/hero.webp). Pode ser substituída por outra foto de paisagem/mata nativa em alta resolução se a cliente preferir. -->
     <div class="hero-bg" id="heroBg" style="background-image:url('assets/img/hero.webp');"></div>
     <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <p class="eyebrow reveal">Bióloga · Consultora Ambiental · 12 anos de experiência</p>
+    <div class="container hero-content hero-content-center">
       <h1 class="hero-title reveal">Consultoria Ambiental com Ciência, Ética e Resultado</h1>
-      <p class="hero-subtitle reveal">Condução completa de processos de licenciamento ambiental, estudos técnicos e adequação à legislação vigente — para empresas dos setores industrial, comercial e do agronegócio em MS, MT, SP e em todo o Brasil.</p>
+      <p class="hero-subtitle reveal">Condução completa de processos de licenciamento ambiental para empresas de todos os setores no MS, MT, SP e em todo o Brasil.</p>
       <div class="hero-actions reveal">
         <a href="#contato" class="btn btn-primary">Agende uma conversa</a>
         <a href="#servicos" class="btn btn-outline-light">Conheça os serviços</a>
@@ -365,7 +358,7 @@
   <!-- ===================== DEPOIMENTOS ===================== -->
   <section class="testimonials" id="depoimentos">
     <div class="container">
-      <div class="section-heading reveal">
+      <div class="section-heading center reveal">
         <p class="eyebrow">Depoimentos</p>
         <h2>O que dizem os clientes</h2>
       </div>
@@ -397,8 +390,9 @@
     </div>
   </section>
 
-  <!-- ===================== CTA FINAL ===================== -->
-  <section class="cta-final">
+  <!-- ===================== CTA FINAL / CONTATO ===================== -->
+  <!-- Seção de contato dedicada removida a pedido do cliente: o WhatsApp é o único canal priorizado. -->
+  <section class="cta-final" id="contato">
     <div class="cta-final-texture" aria-hidden="true"></div>
     <div class="container cta-final-content reveal">
       <h2>Vamos regularizar o seu projeto com segurança técnica e jurídica?</h2>
@@ -410,69 +404,15 @@
     </div>
   </section>
 
-  <!-- ===================== CONTATO ===================== -->
-  <section class="contact" id="contato">
-    <div class="container contact-grid">
-      <div class="contact-form-wrap reveal">
-        <p class="eyebrow">Contato</p>
-        <h2>Solicite seu orçamento</h2>
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="form-group">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" autocomplete="name" required aria-required="true">
-            <span class="form-error" id="erro-nome" role="alert"></span>
-          </div>
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" autocomplete="email" required aria-required="true">
-            <span class="form-error" id="erro-email" role="alert"></span>
-          </div>
-          <div class="form-group">
-            <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" name="telefone" autocomplete="tel" required aria-required="true">
-            <span class="form-error" id="erro-telefone" role="alert"></span>
-          </div>
-          <div class="form-group">
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" rows="4" required aria-required="true"></textarea>
-            <span class="form-error" id="erro-mensagem" role="alert"></span>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Enviar mensagem</button>
-          <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-      <div class="contact-info reveal">
-        <h3>Informações de contato</h3>
-        <ul class="contact-list">
-          <li>
-            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-            <a href="https://wa.me/5567996899084" target="_blank" rel="noopener">(67) 99689-9084</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-            <a href="mailto:contato@carolinebondan.com.br">contato@carolinebondan.com.br</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-            <span>Atendimento em MS, MT, SP e em todo o território nacional</span>
-          </li>
-        </ul>
-        <p class="contact-socials-label">Redes sociais</p>
-        <div class="socials">
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Caroline Bondan"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn de Caroline Bondan"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
 </main>
 
 <!-- ===================== FOOTER ===================== -->
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <img src="assets/img/icon-white.webp" alt="" width="40" height="41" loading="lazy">
+      <span class="footer-brand-badge">
+        <img src="assets/img/icon-color.webp" alt="" width="260" height="267" loading="lazy">
+      </span>
       <div>
         <span class="brand-name">Caroline Bondan</span>
         <span class="brand-sub">Consultoria e Assessoria Ambiental</span>
