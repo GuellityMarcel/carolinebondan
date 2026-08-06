@@ -36,6 +36,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preload" as="image" href="assets/img/logo-full.webp" fetchpriority="high">
 <link rel="preload" as="image" href="assets/img/hero.webp" fetchpriority="high">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600;700&display=swap"></noscript>
@@ -84,6 +85,16 @@
 </head>
 <body>
 
+<noscript><style>.preloader{display:none}</style></noscript>
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-logo">
+    <img src="assets/img/logo-full.webp" alt="" width="560" height="333">
+  </div>
+  <div class="preloader-bar">
+    <span class="preloader-bar-fill" id="preloaderBarFill"></span>
+  </div>
+</div>
+
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
 <!-- ===================== HEADER ===================== -->
@@ -98,6 +109,7 @@
         <li><a href="#sobre" class="nav-link" data-nav>Sobre</a></li>
         <li><a href="#servicos" class="nav-link" data-nav>Serviços</a></li>
         <li><a href="#diferenciais" class="nav-link" data-nav>Diferenciais</a></li>
+        <li><a href="#processo" class="nav-link" data-nav>Como Funciona</a></li>
         <li><a href="#depoimentos" class="nav-link" data-nav>Depoimentos</a></li>
         <li><a href="#contato" class="nav-link" data-nav>Contato</a></li>
       </ul>
@@ -127,6 +139,7 @@
     <li><a href="#sobre" data-nav-mobile>Sobre</a></li>
     <li><a href="#servicos" data-nav-mobile>Serviços</a></li>
     <li><a href="#diferenciais" data-nav-mobile>Diferenciais</a></li>
+    <li><a href="#processo" data-nav-mobile>Como Funciona</a></li>
     <li><a href="#depoimentos" data-nav-mobile>Depoimentos</a></li>
     <li><a href="#contato" data-nav-mobile>Contato</a></li>
   </ul>
@@ -148,7 +161,7 @@
       <h1 class="hero-title reveal">Consultoria Ambiental com Ciência, Ética e Resultado</h1>
       <p class="hero-subtitle reveal">Condução completa de processos de licenciamento ambiental para empresas de todos os setores no MS, MT, SP e em todo o Brasil.</p>
       <div class="hero-actions reveal">
-        <a href="#contato" class="btn btn-primary">Agende uma conversa</a>
+        <a href="#contato" class="btn btn-primary">Solicitar orçamento</a>
         <a href="#servicos" class="btn btn-outline-light">Conheça os serviços</a>
       </div>
     </div>
@@ -208,7 +221,7 @@
   <!-- ===================== SERVIÇOS ===================== -->
   <section class="services" id="servicos">
     <div class="container">
-      <div class="section-heading reveal">
+      <div class="section-heading center reveal">
         <p class="eyebrow">Serviços</p>
         <h2>Soluções completas em consultoria ambiental</h2>
         <p class="section-lead">Do diagnóstico inicial à obtenção da licença, cada etapa conduzida com precisão técnica e acompanhamento próximo ao cliente.</p>
@@ -355,6 +368,59 @@
     </div>
   </section>
 
+  <!-- ===================== COMO FUNCIONA (ETAPAS) ===================== -->
+  <section class="process" id="processo">
+    <div class="container">
+      <div class="section-heading center reveal">
+        <p class="eyebrow">Como funciona</p>
+        <h2>Do primeiro contato à licença na mão</h2>
+        <p class="section-lead">Um caminho claro e acompanhado de perto, em cada uma das etapas do seu processo de licenciamento ambiental.</p>
+      </div>
+      <ol class="process-steps">
+        <li class="process-step reveal">
+          <span class="process-step-icon-wrap">
+            <span class="process-step-icon"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i></span>
+            <span class="process-step-number">1</span>
+          </span>
+          <h3>Primeiro contato</h3>
+          <p>Você chama no WhatsApp e conta sobre o seu projeto ou empreendimento.</p>
+        </li>
+        <li class="process-step reveal">
+          <span class="process-step-icon-wrap">
+            <span class="process-step-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></span>
+            <span class="process-step-number">2</span>
+          </span>
+          <h3>Diagnóstico ambiental</h3>
+          <p>Levantamento técnico da situação atual e das exigências legais aplicáveis ao caso.</p>
+        </li>
+        <li class="process-step reveal">
+          <span class="process-step-icon-wrap">
+            <span class="process-step-icon"><i class="fa-solid fa-file-signature" aria-hidden="true"></i></span>
+            <span class="process-step-number">3</span>
+          </span>
+          <h3>Elaboração dos estudos</h3>
+          <p>Produção dos laudos, projetos e documentação técnica exigida no processo.</p>
+        </li>
+        <li class="process-step reveal">
+          <span class="process-step-icon-wrap">
+            <span class="process-step-icon"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></span>
+            <span class="process-step-number">4</span>
+          </span>
+          <h3>Protocolo e acompanhamento</h3>
+          <p>Submissão junto ao órgão ambiental competente, com acompanhamento ativo de cada etapa.</p>
+        </li>
+        <li class="process-step reveal">
+          <span class="process-step-icon-wrap">
+            <span class="process-step-icon"><i class="fa-solid fa-certificate" aria-hidden="true"></i></span>
+            <span class="process-step-number">5</span>
+          </span>
+          <h3>Emissão da licença</h3>
+          <p>Entrega da licença ambiental, com orientação sobre condicionantes e prazos de renovação.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
   <!-- ===================== DEPOIMENTOS ===================== -->
   <section class="testimonials" id="depoimentos">
     <div class="container">
@@ -424,6 +490,7 @@
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#processo">Como Funciona</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>

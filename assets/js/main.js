@@ -8,6 +8,23 @@
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ------------------------------------------------------------
+     Tela de abertura (preloader) — 4s, com barra de carregamento
+  ------------------------------------------------------------ */
+  var preloader = document.getElementById('preloader');
+  if (preloader) {
+    document.body.classList.add('is-loading');
+    var preloaderDelay = reducedMotion ? 200 : 4000;
+    setTimeout(function () {
+      preloader.classList.add('is-hidden');
+      document.body.classList.remove('is-loading');
+    }, preloaderDelay);
+    // Failsafe: garante que a tela nunca fique presa caso algo falhe.
+    setTimeout(function () {
+      preloader.style.display = 'none';
+    }, preloaderDelay + 800);
+  }
+
+  /* ------------------------------------------------------------
      Ano dinâmico no rodapé
   ------------------------------------------------------------ */
   var anoEl = document.getElementById('anoAtual');
