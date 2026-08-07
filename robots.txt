@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://guellitymarcel.github.io/carolinebondan/sitemap.xml
+Sitemap: https://bondanconsultoriaambiental.com.br/sitemap.xml
