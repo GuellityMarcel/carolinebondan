@@ -32,7 +32,7 @@
 
 /* ----------------------- Reset ----------------------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 108px; }
+html { scroll-behavior: smooth; scroll-padding-top: 108px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
   margin: 0;
   font-family: var(--fonte-corpo);
@@ -158,11 +158,9 @@ body.is-loading { overflow: hidden; }
   top: 0;
   z-index: 100;
   width: 100%;
-  transition: box-shadow var(--transicao);
-}
-.site-header {
   background: var(--branco);
   border-bottom: 1px solid rgba(38, 49, 28, 0.08);
+  transition: box-shadow var(--transicao);
 }
 .header-inner {
   display: flex;
@@ -461,7 +459,7 @@ body.is-loading { overflow: hidden; }
   align-items: center;
 }
 .methodology-text p { color: var(--texto-suave); }
-.methodology-image img { border-radius: var(--raio); box-shadow: var(--sombra); object-fit: cover; width: 100%; aspect-ratio: 830/1024; }
+.methodology-image img { border-radius: var(--raio); box-shadow: var(--sombra); object-fit: cover; width: 100%; aspect-ratio: 896/1200; }
 .methodology-features {
   margin-top: 1.8rem;
   display: grid;
